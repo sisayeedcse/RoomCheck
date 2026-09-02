@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login — ROOMCHECK</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="auth-page">
+
+<nav class="navbar navbar-expand-lg site-navbar">
+    <div class="container">
+        <a class="navbar-brand navbar-brand-text" href="index.html">ROOM<span>CHECK</span></a>
+        <div class="ms-auto">
+            <a href="index.html" class="btn-nav-login" style="background:transparent; border:1px solid rgba(255,255,255,0.2); color:#cbd5e1;">Back to Home</a>
+        </div>
+    </div>
+</nav>
+
+<div class="auth-container">
+    <div class="auth-card">
+        <div class="auth-logo">
+            <div class="auth-logo-text">ROOM<span>CHECK</span></div>
+        </div>
+        <h1 class="auth-heading">Welcome Back</h1>
+        <p class="auth-subheading">Sign in to check room availability and manage your bookings.</p>
+
+        <form action="dashboard.html" method="get">
+            <div class="mb-3">
+                <label class="form-label-rc" for="email">Email Address</label>
+                <input type="email" id="email" class="form-control-rc" placeholder="you@university.edu">
+            </div>
+            <div class="mb-3">
+                <label class="form-label-rc" for="password">Password</label>
+                <input type="password" id="password" class="form-control-rc" placeholder="Your password">
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div style="display:flex; align-items:center; gap:8px;">
+                    <input type="checkbox" id="remember" style="width:16px; height:16px; accent-color:#3b82f6;">
+                    <label for="remember" style="font-size:13px; color:#64748b; cursor:pointer;">Remember me</label>
+                </div>
+                <a href="#" style="font-size:13px; color:#3b82f6; font-weight:600;">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn-search">Login</button>
+        </form>
+
+        <hr class="auth-divider">
+        <p class="auth-footer-text">Don't have an account? <a href="register.html">Create an account</a></p>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

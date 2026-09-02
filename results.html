@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results — ROOMCHECK</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="page-wrapper">
+
+<nav class="navbar navbar-expand-lg site-navbar">
+    <div class="container">
+        <a class="navbar-brand navbar-brand-text" href="index.html">ROOM<span>CHECK</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 gap-2 mt-3 mt-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="search.html">Find a Room</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#how-it-works">How It Works</a></li>
+                <li class="nav-item ms-lg-2"><a class="btn-nav-login" href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="page-header">
+    <div class="container">
+        <h1 class="page-header-title">Available Rooms</h1>
+        <p class="page-header-desc">Showing sample availability results. Actual results will reflect real-time data.</p>
+    </div>
+</div>
+
+<main class="results-page">
+    <div class="container">
+
+        <div class="prototype-notice">
+            <i class="bi bi-info-circle"></i>
+            This page shows sample availability data. In the final system, results will be based on your actual search.
+        </div>
+
+        <div class="search-summary-bar">
+            <div id="summary-tags" class="search-summary-tags">
+                <span class="summary-tag"><i class="bi bi-calendar3"></i> September 10, 2026</span>
+                <span class="summary-tag"><i class="bi bi-door-open"></i> Room 403</span>
+            </div>
+            <a href="search.html" class="btn-rc btn-rc-outline" style="flex:none;">Modify Search</a>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="filter-sidebar">
+                    <p class="filter-title">Filters</p>
+
+                    <div class="filter-group">
+                        <p class="filter-group-title">Room Type</p>
+                        <div class="filter-option">
+                            <input type="checkbox" id="f-classroom" checked>
+                            <label for="f-classroom">Classroom</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="f-lab">
+                            <label for="f-lab">Laboratory</label>
+                        </div>
+                    </div>
+
+                    <hr class="filter-divider">
+
+                    <div class="filter-group">
+                        <p class="filter-group-title">Capacity</p>
+                        <div class="filter-option">
+                            <input type="radio" name="cap" id="f-cap-any" checked>
+                            <label for="f-cap-any">Any</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="radio" name="cap" id="f-cap-20">
+                            <label for="f-cap-20">20+ Students</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="radio" name="cap" id="f-cap-30">
+                            <label for="f-cap-30">30+ Students</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="radio" name="cap" id="f-cap-50">
+                            <label for="f-cap-50">50+ Students</label>
+                        </div>
+                    </div>
+
+                    <hr class="filter-divider">
+
+                    <div class="filter-group">
+                        <p class="filter-group-title">Floor</p>
+                        <div class="filter-option">
+                            <input type="checkbox" id="f-floor4" checked>
+                            <label for="f-floor4">4th Floor</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="f-floor6">
+                            <label for="f-floor6">6th Floor</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="f-floor9">
+                            <label for="f-floor9">9th Floor</label>
+                        </div>
+                    </div>
+
+                    <hr class="filter-divider">
+
+                    <div class="filter-group">
+                        <p class="filter-group-title">Availability</p>
+                        <div class="filter-option">
+                            <input type="checkbox" id="f-avail" checked>
+                            <label for="f-avail">Available</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="f-occ" checked>
+                            <label for="f-occ">Occupied</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-9 mt-4 mt-lg-0">
+                <p id="results-count" class="results-count">Showing 4 rooms — 3 available, 1 occupied</p>
+
+                <div id="results-container" class="row gy-4">
+
+                    <div class="col-md-6">
+                        <div class="room-card">
+                            <div class="room-card-img">
+                                <div class="room-card-img-placeholder"><i class="bi bi-door-open"></i></div>
+                            </div>
+                            <div class="room-card-body">
+                                <div class="room-card-header">
+                                    <h3 class="room-card-name">Room 403</h3>
+                                    <span class="status-badge available"><span style="width:6px;height:6px;border-radius:50%;background:#22c55e;display:inline-block;"></span> Available</span>
+                                </div>
+                                <p class="room-card-type">Classroom</p>
+                                <p class="room-card-location"><i class="bi bi-geo-alt"></i> Academic Building • 4th Floor</p>
+                                <p class="room-card-capacity"><i class="bi bi-people"></i> Capacity: 50 Students</p>
+                                <div class="facility-tags">
+                                    <span class="facility-tag"><i class="bi bi-projector"></i> Projector</span>
+                                    <span class="facility-tag"><i class="bi bi-thermometer"></i> AC</span>
+                                    <span class="facility-tag"><i class="bi bi-wifi"></i> Wi-Fi</span>
+                                    <span class="facility-tag"><i class="bi bi-pen"></i> Whiteboard</span>
+                                </div>
+                                <div class="room-card-actions">
+                                    <a href="room-details.html" class="btn-rc btn-rc-outline">View Details</a>
+                                    <a href="room-details.html" class="btn-rc btn-rc-primary">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="room-card occupied-card">
+                            <div class="room-card-img">
+                                <div class="room-card-img-placeholder" style="background:linear-gradient(135deg, #450a0a 0%, #7f1d1d 100%);"><i class="bi bi-door-closed"></i></div>
+                            </div>
+                            <div class="room-card-body">
+                                <div class="room-card-header">
+                                    <h3 class="room-card-name">Room 404</h3>
+                                    <span class="status-badge occupied"><span style="width:6px;height:6px;border-radius:50%;background:#ef4444;display:inline-block;"></span> Occupied</span>
+                                </div>
+                                <p class="room-card-type">Classroom</p>
+                                <p class="room-card-location"><i class="bi bi-geo-alt"></i> Academic Building • 4th Floor</p>
+                                <p class="room-card-capacity"><i class="bi bi-people"></i> Capacity: 40 Students</p>
+                                <div class="facility-tags">
+                                    <span class="facility-tag"><i class="bi bi-projector"></i> Projector</span>
+                                    <span class="facility-tag"><i class="bi bi-thermometer"></i> AC</span>
+                                    <span class="facility-tag"><i class="bi bi-wifi"></i> Wi-Fi</span>
+                                </div>
+                                <div class="room-card-actions">
+                                    <a href="room-details.html" class="btn-rc btn-rc-outline">View Schedule</a>
+                                    <button class="btn-rc btn-rc-secondary" style="flex:1; cursor:not-allowed;">Unavailable</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="room-card">
+                            <div class="room-card-img">
+                                <div class="room-card-img-placeholder" style="background:linear-gradient(135deg, #1e1b4b 0%, #4c1d95 100%);"><i class="bi bi-pc-display"></i></div>
+                            </div>
+                            <div class="room-card-body">
+                                <div class="room-card-header">
+                                    <h3 class="room-card-name">Lab 601</h3>
+                                    <span class="status-badge available"><span style="width:6px;height:6px;border-radius:50%;background:#22c55e;display:inline-block;"></span> Available</span>
+                                </div>
+                                <p class="room-card-type">Laboratory</p>
+                                <p class="room-card-location"><i class="bi bi-geo-alt"></i> Engineering Building • 6th Floor</p>
+                                <p class="room-card-capacity"><i class="bi bi-people"></i> Capacity: 30 Students</p>
+                                <div class="facility-tags">
+                                    <span class="facility-tag"><i class="bi bi-pc-display"></i> Computers</span>
+                                    <span class="facility-tag"><i class="bi bi-thermometer"></i> AC</span>
+                                    <span class="facility-tag"><i class="bi bi-wifi"></i> Wi-Fi</span>
+                                </div>
+                                <div class="room-card-actions">
+                                    <a href="room-details.html" class="btn-rc btn-rc-outline">View Details</a>
+                                    <a href="room-details.html" class="btn-rc btn-rc-primary">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="room-card">
+                            <div class="room-card-img">
+                                <div class="room-card-img-placeholder" style="background:linear-gradient(135deg, #052e16 0%, #166534 100%);"><i class="bi bi-door-open"></i></div>
+                            </div>
+                            <div class="room-card-body">
+                                <div class="room-card-header">
+                                    <h3 class="room-card-name">Room 405</h3>
+                                    <span class="status-badge available"><span style="width:6px;height:6px;border-radius:50%;background:#22c55e;display:inline-block;"></span> Available</span>
+                                </div>
+                                <p class="room-card-type">Classroom</p>
+                                <p class="room-card-location"><i class="bi bi-geo-alt"></i> Academic Building • 4th Floor</p>
+                                <p class="room-card-capacity"><i class="bi bi-people"></i> Capacity: 50 Students</p>
+                                <div class="facility-tags">
+                                    <span class="facility-tag"><i class="bi bi-projector"></i> Projector</span>
+                                    <span class="facility-tag"><i class="bi bi-thermometer"></i> AC</span>
+                                    <span class="facility-tag"><i class="bi bi-wifi"></i> Wi-Fi</span>
+                                    <span class="facility-tag"><i class="bi bi-lightning"></i> Power Outlets</span>
+                                </div>
+                                <div class="room-card-actions">
+                                    <a href="room-details.html" class="btn-rc btn-rc-outline">View Details</a>
+                                    <a href="room-details.html" class="btn-rc btn-rc-primary">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="alt-section">
+                    <p class="alt-section-title"><i class="bi bi-exclamation-circle me-1"></i> Room 302 is occupied at your selected time.</p>
+                    <p class="alt-section-desc">You may want to try these available rooms as alternatives:</p>
+                    <div class="alt-room-list">
+                        <a href="room-details.html" class="alt-room-chip"><i class="bi bi-door-open"></i> Room 301</a>
+                        <a href="room-details.html" class="alt-room-chip"><i class="bi bi-pc-display"></i> Lab 204</a>
+                        <a href="room-details.html" class="alt-room-chip"><i class="bi bi-door-open"></i> Room 405</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-brand">ROOM<span>CHECK</span></div>
+        <hr class="footer-divider">
+        <p class="footer-copy">&copy; 2026 ROOMCHECK. A university Internet Programming project prototype.</p>
+    </div>
+</footer>
+
+<script src="js/rooms.js"></script>
+<script src="js/schedule.js"></script>
+<script src="js/room-check.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
