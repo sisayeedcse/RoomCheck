@@ -3,158 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Room 403 — ROOMCHECK</title>
+    <title>Room Details — ROOMCHECK</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body class="page-wrapper">
+<body>
 
-<nav class="navbar navbar-expand-lg site-navbar">
+<nav class="site-navbar">
     <div class="container">
-        <a class="navbar-brand navbar-brand-text" href="index.html">ROOM<span>CHECK</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 gap-2 mt-3 mt-lg-0">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="search.html">Find a Room</a></li>
-                <li class="nav-item"><a class="nav-link" href="results.html">Results</a></li>
-                <li class="nav-item ms-lg-2"><a class="btn-nav-login" href="login.html">Login</a></li>
-            </ul>
+        <div class="d-flex justify-content-between align-items-center w-100">
+            <a class="navbar-brand-text" href="index.html">ROOM<span>CHECK</span></a>
+            <div class="d-flex gap-4 align-items-center">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active" href="search.html">Find a Room</a>
+                <a class="nav-link" href="routine.html">Routine</a>
+                <a class="nav-link" href="bookings.html">My Bookings</a>
+                <a class="btn-rc-primary" href="login.html" style="padding: 6px 16px;">Login</a>
+            </div>
         </div>
     </div>
 </nav>
 
-<main class="room-details-page">
+<main style="padding: 60px 0;">
     <div class="container">
-
-        <div class="mb-4">
-            <a href="results.html" style="font-size:14px; color:#3b82f6; font-weight:600; display:inline-flex; align-items:center; gap:5px;">
-                <i class="bi bi-arrow-left"></i> Back to Results
-            </a>
-        </div>
-
-        <div class="prototype-notice">
-            <i class="bi bi-info-circle"></i>
-            This is a sample room details page. Schedule and availability shown here are for demonstration only.
-        </div>
-
-        <div class="row gy-4">
-            <div class="col-lg-8">
-
-                <div class="room-details-card">
-                    <div class="room-details-img">
-                        <i class="bi bi-door-open"></i>
-                    </div>
-                    <div class="room-details-body">
-                        <div class="d-flex justify-content-between align-items-flex-start gap-3 flex-wrap">
-                            <div>
-                                <h1 id="rd-name" class="room-details-name">Room 403</h1>
-                                <p id="rd-type" class="room-details-type">Classroom &nbsp;&bull;&nbsp; Academic Building &nbsp;&bull;&nbsp; 4th Floor</p>
-                            </div>
-                            <span class="status-badge available" style="font-size:13px; padding:6px 14px;">
-                                <span style="width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block;"></span>
-                                AVAILABLE
-                            </span>
-                        </div>
-
-                        <div class="room-info-grid">
-                            <div class="room-info-item">
-                                <p class="room-info-label">Capacity</p>
-                                <p id="rd-capacity" class="room-info-value">50 Students</p>
-                            </div>
-                            <div class="room-info-item">
-                                <p class="room-info-label">Room Type</p>
-                                <p id="rd-room-type" class="room-info-value">Classroom</p>
-                            </div>
-                            <div class="room-info-item">
-                                <p class="room-info-label">Building</p>
-                                <p id="rd-building" class="room-info-value">Academic Building</p>
-                            </div>
-                            <div class="room-info-item">
-                                <p class="room-info-label">Floor</p>
-                                <p id="rd-floor" class="room-info-value">4th Floor</p>
-                            </div>
-                        </div>
+        <div class="row">
+            <div class="col-lg-8 mb-5 mb-lg-0">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1 style="font-size: 32px; color: #1e3a8a; margin: 0;">Room 403</h1>
+                    <div>
+                        <a href="results.html" class="btn-outline-main me-2">Back to Rooms</a>
+                        <a href="#" class="btn-primary-main">Book This Room</a>
                     </div>
                 </div>
 
-                <div class="section-card mt-4">
-                    <p class="section-card-title">Facilities</p>
-                    <div class="facilities-list" id="rd-facilities">
-                        <div class="facility-item"><i class="bi bi-projector"></i> Projector</div>
-                        <div class="facility-item"><i class="bi bi-thermometer-sun"></i> Air Conditioning</div>
-                        <div class="facility-item"><i class="bi bi-wifi"></i> Wi-Fi</div>
-                        <div class="facility-item"><i class="bi bi-pen"></i> Whiteboard</div>
-                        <div class="facility-item"><i class="bi bi-lightning"></i> Power Outlets</div>
-                    </div>
+                <div class="mb-4">
+                    <span class="badge" style="background-color: #f59e0b; color: white; padding: 6px 12px; font-size: 14px; margin-right: 8px;">Classroom</span>
+                    <span class="badge" style="background-color: #64748b; color: white; padding: 6px 12px; font-size: 14px;">4th Floor</span>
                 </div>
 
-                <div class="section-card mt-4">
-                    <p id="rd-schedule-title" class="section-card-title">Today's Schedule</p>
-                    <div class="table-responsive">
-                        <table class="table schedule-table">
-                            <thead>
-                                <tr>
-                                    <th>Time</th>
-                                    <th>Activity</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody id="rd-schedule-tbody">
-                            </tbody>
-                        </table>
-                    </div>
+                <h3 style="color: #1e3a8a; margin-top: 40px; margin-bottom: 20px;">Today's Schedule</h3>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Time</th>
+                                <th>Course</th>
+                                <th>Instructor</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>08:30–09:20</td>
+                                <td>CSE 301 - Data Structures</td>
+                                <td>Mr. Hasan</td>
+                                <td><span class="status-badge occupied">OCCUPIED</span></td>
+                            </tr>
+                            <tr>
+                                <td>09:20–10:10</td>
+                                <td>CSE 301 - Data Structures</td>
+                                <td>Mr. Hasan</td>
+                                <td><span class="status-badge occupied">OCCUPIED</span></td>
+                            </tr>
+                            <tr>
+                                <td>10:10–11:00</td>
+                                <td colspan="2" class="text-center" style="color: #64748b;">—</td>
+                                <td><span class="status-badge available">AVAILABLE</span></td>
+                            </tr>
+                            <tr>
+                                <td>11:00–12:40</td>
+                                <td>CSE 405 - Database</td>
+                                <td>Ms. Rahman</td>
+                                <td><span class="status-badge occupied">OCCUPIED</span></td>
+                            </tr>
+                            <tr>
+                                <td>12:40–16:00</td>
+                                <td colspan="2" class="text-center" style="color: #64748b;">—</td>
+                                <td><span class="status-badge available">AVAILABLE</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-
             </div>
 
             <div class="col-lg-4">
-                <div class="booking-cta-card">
-                    <p class="booking-cta-title">Need this room?</p>
-                    <p class="booking-cta-desc">Select your preferred date and time, then submit your booking request.</p>
-
-                    <div class="mb-3">
-                        <label class="form-label-rc" for="b-date">Date</label>
-                        <input type="date" id="b-date" class="form-control-rc">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label-rc" for="b-start">Start Time</label>
-                        <input type="time" id="b-start" class="form-control-rc">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label-rc" for="b-end">End Time</label>
-                        <input type="time" id="b-end" class="form-control-rc">
-                    </div>
-                    <div class="mb-4">
-                        <label class="form-label-rc" for="b-purpose">Purpose</label>
-                        <input type="text" id="b-purpose" class="form-control-rc" placeholder="e.g. Group Study, Meeting">
-                    </div>
-                    <a href="bookings.html" class="btn-search d-block text-center" style="text-decoration:none;">Book This Room</a>
-                    <p style="font-size:12px; color:#94a3b8; text-align:center; margin-top:10px;">Booking requires login. Sample interface only.</p>
+                <div class="section-card">
+                    <h3 class="section-card-title">Room Information</h3>
+                    <ul class="list-unstyled mb-0" style="color: #64748b; font-size: 15px; line-height: 2;">
+                        <li><strong>Room Number:</strong> 403</li>
+                        <li><strong>Room Type:</strong> Classroom</li>
+                        <li><strong>Floor:</strong> 4th Floor</li>
+                        <li><strong>Building:</strong> Academic Building</li>
+                        <li><strong>Capacity:</strong> 50 Students</li>
+                    </ul>
                 </div>
             </div>
         </div>
-
     </div>
 </main>
 
-<footer class="site-footer">
-    <div class="container">
-        <div class="footer-brand">ROOM<span>CHECK</span></div>
-        <hr class="footer-divider">
-        <p class="footer-copy">&copy; 2026 ROOMCHECK. A university Internet Programming project prototype.</p>
+<footer class="site-footer mt-auto">
+    <div class="container text-center">
+        <p style="color:#64748b; font-size:13px; margin:0;">&copy; 2026 ROOMCHECK.</p>
     </div>
 </footer>
 
-<script src="js/rooms.js"></script>
-<script src="js/schedule.js"></script>
-<script src="js/room-check.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-

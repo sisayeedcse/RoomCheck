@@ -14,156 +14,122 @@
 <nav class="site-navbar">
     <div class="container">
         <div class="d-flex justify-content-between align-items-center w-100">
-            <a class="navbar-brand-text" href="dashboard.html">ROOM<span>CHECK</span></a>
-            <div class="d-flex align-items-center gap-4">
-                <a class="nav-link active" href="dashboard.html">Dashboard</a>
+            <a class="navbar-brand-text" href="index.html">ROOM<span>CHECK</span></a>
+            <div class="d-flex gap-4 align-items-center">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="search.html">Find a Room</a>
+                <a class="nav-link" href="routine.html">Routine</a>
                 <a class="nav-link" href="bookings.html">My Bookings</a>
-                <a href="index.html" class="btn-rc-outline" style="padding: 6px 16px; font-size:12px;">Logout</a>
+                <a class="nav-link active" href="dashboard.html">Dashboard</a>
             </div>
         </div>
     </div>
 </nav>
 
-<main class="dashboard-page" style="padding: 50px 0;">
+<main style="padding: 40px 0;">
     <div class="container">
-        
-        <div class="d-flex justify-content-between align-items-end mb-4">
-            <div>
-                <h1 style="font-size: 28px; font-weight: 700; color: #1e3a8a; margin-bottom: 4px;">Student Dashboard</h1>
-                <p style="color: #64748b; font-size: 15px; margin: 0;">Welcome back, John. Here is your overview.</p>
-            </div>
+        <div class="mb-5">
+            <h1 style="font-size: 28px; font-weight: 700; color: #1e3a8a;">Welcome to ROOMCHECK</h1>
+            <p style="color: #64748b;">Student / Faculty Dashboard Overview</p>
         </div>
 
-        <div class="quick-search-card mb-5">
-                        <form action="results.html" method="GET">
-                <div class="row gy-3 align-items-end">
-                                                <div class="col-md-3">
-                                <label class="form-label-rc" for="date">Select Date</label>
-                                <input type="date" id="date" name="date" class="form-control-rc" required>
-                            </div>
-                            <div class="col-md-3">
-                                <label class="form-label-rc" for="floor">Select Floor</label>
-                                <select id="floor" name="floor" class="form-select-rc">
-                                    <option value="">Any Floor</option>
-                                    <option>4th Floor</option>
-                                    <option>6th Floor</option>
-                                    <option>9th Floor</option>
-                                </select>
-                            </div>
-                            <div class="col-md-3">
-                                <label class="form-label-rc" for="room">Room (Optional)</label>
-                                <select id="room" name="room" class="form-select-rc">
-                                    <option value="">Any Room</option>
-                                    <optgroup label="Classrooms - 4th Floor">
-                                        <option>403</option><option>404</option><option>405</option><option>406</option>
-                                        <option>408</option><option>409</option><option>410</option><option>411</option>
-                                    </optgroup>
-                                    <optgroup label="Classrooms - 6th Floor">
-                                        <option>610</option><option>611</option><option>612</option><option>613</option>
-                                    </optgroup>
-                                    <optgroup label="Classrooms - 9th Floor">
-                                        <option>901</option><option>902</option><option>903</option><option>910</option>
-                                    </optgroup>
-                                    <optgroup label="Laboratories - 6th Floor">
-                                        <option>601</option><option>604</option><option>605</option><option>608</option>
-                                    </optgroup>
-                                    <optgroup label="Laboratories - 9th Floor">
-                                        <option>904</option><option>905</option>
-                                    </optgroup>
-                                </select>
-                            </div>
-                            <div class="col-md-3">
-                                <label class="form-label-rc d-none d-md-block">&nbsp;</label>
-                                <button type="submit" class="btn-search w-100" style="padding: 12px;">Search</button>
-                            </div>
+        <div class="row gy-4 mb-5">
+            <div class="col-md-3">
+                <div class="section-card text-center" style="padding: 20px;">
+                    <div style="font-size: 32px; font-weight: 800; color: #166534;">12</div>
+                    <div style="font-size: 14px; color: #64748b; font-weight: 600;">Available Rooms</div>
                 </div>
-            </form>
+            </div>
+            <div class="col-md-3">
+                <div class="section-card text-center" style="padding: 20px;">
+                    <div style="font-size: 32px; font-weight: 800; color: #991b1b;">10</div>
+                    <div style="font-size: 14px; color: #64748b; font-weight: 600;">Occupied Rooms</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="section-card text-center" style="padding: 20px;">
+                    <div style="font-size: 32px; font-weight: 800; color: #f59e0b;">1</div>
+                    <div style="font-size: 14px; color: #64748b; font-weight: 600;">Upcoming Booking</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="section-card text-center" style="padding: 20px;">
+                    <div style="font-size: 32px; font-weight: 800; color: #1e3a8a;">4</div>
+                    <div style="font-size: 14px; color: #64748b; font-weight: 600;">Saved Rooms</div>
+                </div>
+            </div>
         </div>
 
         <div class="row gy-4">
-            <div class="col-lg-8">
-                <div class="section-card" style="padding: 0;">
-                    <div style="padding: 24px; border-bottom: 1px solid #e2e8f0; display:flex; justify-content:space-between; align-items:center;">
-                        <p class="section-card-title" style="border:none; padding:0; margin:0;">Upcoming Bookings</p>
-                        <a href="bookings.html" style="font-size:13px; font-weight:600; color:#1e3a8a;">View All</a>
-                    </div>
-                    
-                    <div style="padding: 24px;">
-                        
-                        <div style="display:flex; flex-wrap: wrap; justify-content:space-between; align-items:flex-start; padding-bottom: 24px; border-bottom: 1px solid #f1f5f9;">
-                            <div>
-                                <div style="display:flex; align-items:center; gap: 12px; margin-bottom: 4px;">
-                                    <h4 style="font-size:18px; font-weight:700; color:#1e3a8a; margin:0;">Room 403</h4>
-                                    <span class="status-badge available" style="padding: 2px 8px; font-size:10px;">Confirmed</span>
-                                </div>
-                                <p style="font-size:13px; color:#64748b; margin:0; font-weight:500;">Classroom &nbsp;&bull;&nbsp; 4th Floor</p>
-                                <div style="margin-top: 12px; font-size: 14px; color: #0f172a; display:flex; flex-wrap: wrap; gap:16px;">
-                                    <span><i class="bi bi-calendar3" style="color:#64748b; margin-right:4px;"></i> Sep 10, 2026</span>
-                                    <span><i class="bi bi-clock" style="color:#64748b; margin-right:4px;"></i> 10:00 AM – 12:00 PM</span>
-                                </div>
-                            </div>
-                            <div style="display:flex; gap:8px; margin-top:12px;">
-                                <a href="room-details.html" class="btn-rc-outline" style="padding: 6px 16px; font-size: 12px;">Modify</a>
-                            </div>
+            <div class="col-lg-4">
+                <div class="section-card h-100">
+                    <h3 class="section-card-title">Quick Search</h3>
+                    <form action="results.html" method="GET">
+                        <div class="mb-3">
+                            <label class="form-label-rc">Date</label>
+                            <input type="date" class="form-control-rc" required>
                         </div>
-
-                        
-                        <div style="display:flex; flex-wrap: wrap; justify-content:space-between; align-items:flex-start; padding-top: 24px;">
-                            <div>
-                                <div style="display:flex; align-items:center; gap: 12px; margin-bottom: 4px;">
-                                    <h4 style="font-size:18px; font-weight:700; color:#1e3a8a; margin:0;">Lab 601</h4>
-                                    <span class="status-badge occupied" style="padding: 2px 8px; font-size:10px;">Pending</span>
-                                </div>
-                                <p style="font-size:13px; color:#64748b; margin:0; font-weight:500;">Laboratory &nbsp;&bull;&nbsp; 6th Floor</p>
-                                <div style="margin-top: 12px; font-size: 14px; color: #0f172a; display:flex; flex-wrap: wrap; gap:16px;">
-                                    <span><i class="bi bi-calendar3" style="color:#64748b; margin-right:4px;"></i> Sep 12, 2026</span>
-                                    <span><i class="bi bi-clock" style="color:#64748b; margin-right:4px;"></i> 2:00 PM – 4:00 PM</span>
-                                </div>
-                            </div>
-                            <div style="display:flex; gap:8px; margin-top:12px;">
-                                <a href="room-details.html" class="btn-rc-outline" style="padding: 6px 16px; font-size: 12px;">Modify</a>
-                            </div>
+                        <div class="mb-3">
+                            <label class="form-label-rc">Start Time</label>
+                            <input type="time" class="form-control-rc">
                         </div>
-                    </div>
+                        <div class="mb-3">
+                            <label class="form-label-rc">End Time</label>
+                            <input type="time" class="form-control-rc">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label-rc">Room Type</label>
+                            <select class="form-select-rc">
+                                <option>Any Type</option>
+                                <option>Classroom</option>
+                                <option>Laboratory</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary-main w-100">Search</button>
+                    </form>
                 </div>
             </div>
 
-            <div class="col-lg-4">
-                <div class="section-card h-100" style="padding: 24px;">
-                    <p class="section-card-title" style="margin-bottom:24px;">Quick Stats</p>
-                    
-                    <div style="display:flex; align-items:center; gap: 16px; padding: 16px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 12px;">
-                        <div style="width:40px; height:40px; background:#eff6ff; color:#1e3a8a; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:18px;"><i class="bi bi-journal-check"></i></div>
+            <div class="col-lg-8">
+                <div class="section-card mb-4">
+                    <h3 class="section-card-title d-flex justify-content-between align-items-center">
+                        Upcoming Booking
+                        <a href="bookings.html" style="font-size: 13px; font-weight: 600;">View All</a>
+                    </h3>
+                    <div class="d-flex justify-content-between align-items-center p-3" style="background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0;">
                         <div>
-                            <div style="font-size:20px; font-weight:700; color:#0f172a; line-height:1;">4</div>
-                            <div style="font-size:12px; color:#64748b; font-weight:600; text-transform:uppercase; margin-top:4px;">Total Bookings</div>
+                            <div style="font-weight: 700; color: #1e3a8a; font-size: 16px;">Room 403</div>
+                            <div style="font-size: 14px; color: #64748b;">Classroom &bull; Saturday &bull; 11:00 AM – 12:00 PM</div>
                         </div>
+                        <span class="badge" style="background-color: #22c55e;">CONFIRMED</span>
                     </div>
+                </div>
 
-                    <div style="display:flex; align-items:center; gap: 16px; padding: 16px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px;">
-                        <div style="width:40px; height:40px; background:#fffbeb; color:#d97706; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:18px;"><i class="bi bi-star-fill"></i></div>
-                        <div>
-                            <div style="font-size:20px; font-weight:700; color:#0f172a; line-height:1;">3</div>
-                            <div style="font-size:12px; color:#64748b; font-weight:600; text-transform:uppercase; margin-top:4px;">Saved Rooms</div>
-                        </div>
-                    </div>
-                    
+                <div class="section-card">
+                    <h3 class="section-card-title">Recent Activity</h3>
+                    <ul class="list-unstyled mb-0" style="font-size: 14px; color: #64748b;">
+                        <li style="padding: 12px 0; border-bottom: 1px solid #e2e8f0;">
+                            <strong style="color: #1e3a8a;">Booked Room 901</strong> for group discussion on Monday.
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid #e2e8f0;">
+                            <strong style="color: #1e3a8a;">Cancelled Room 605</strong> reservation.
+                        </li>
+                        <li style="padding: 12px 0;">
+                            <strong style="color: #1e3a8a;">Searched for Laboratory</strong> on Wednesday morning.
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-
     </div>
 </main>
 
-<footer class="site-footer mt-auto" style="padding: 24px 0;">
+<footer class="site-footer mt-auto">
     <div class="container text-center">
-        <p style="color:#64748b; font-size:13px; margin:0; font-weight: 500;">&copy; 2026 ROOMCHECK. Developed for CSE Department.</p>
+        <p style="color:#64748b; font-size:13px; margin:0;">&copy; 2026 ROOMCHECK.</p>
     </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-

@@ -13,93 +13,81 @@
 
 <nav class="site-navbar">
     <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-            <a class="navbar-brand-text" href="dashboard.html">ROOM<span>CHECK</span></a>
-            <div class="d-flex align-items-center gap-4">
-                <a class="nav-link" href="dashboard.html">Dashboard</a>
+        <div class="d-flex justify-content-between align-items-center w-100">
+            <a class="navbar-brand-text" href="index.html">ROOM<span>CHECK</span></a>
+            <div class="d-flex gap-4 align-items-center">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="search.html">Find a Room</a>
+                <a class="nav-link" href="routine.html">Routine</a>
                 <a class="nav-link active" href="bookings.html">My Bookings</a>
-                <a href="search.html" class="btn-rc-primary" style="padding: 6px 16px; font-size:12px;">New Search</a>
+                <a class="nav-link" href="dashboard.html">Dashboard</a>
             </div>
         </div>
     </div>
 </nav>
 
-<main class="bookings-page" style="padding: 60px 0;">
-    <div class="container" style="max-width: 900px;">
-        
-        <div style="margin-bottom: 40px;">
-            <h1 style="font-size: 32px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 8px;">My Bookings</h1>
-            <p style="font-size: 15px; color: #6b7280;">View and manage your room reservations.</p>
+<main style="padding: 60px 0;">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <h1 style="font-size: 32px; font-weight: 700; color: #1e3a8a; margin: 0;">My Bookings</h1>
+            <a href="search.html" class="btn-primary-main">Book a Room</a>
         </div>
 
-        <div style="display: flex; gap: 24px; border-bottom: 1px solid #e5e7eb; margin-bottom: 30px;">
-            <div style="padding-bottom: 12px; border-bottom: 2px solid #111827; font-weight: 600; color: #111827; font-size: 14px; cursor: pointer;">Upcoming</div>
-            <div style="padding-bottom: 12px; font-weight: 500; color: #6b7280; font-size: 14px; cursor: pointer;">Completed</div>
-            <div style="padding-bottom: 12px; font-weight: 500; color: #6b7280; font-size: 14px; cursor: pointer;">Cancelled</div>
-        </div>
-
-        <div class="section-card" style="padding: 0;">
-            <div style="padding: 30px;">
-                
-                
-                <div style="display:flex; flex-wrap: wrap; justify-content:space-between; align-items:flex-start; padding-bottom: 30px; border-bottom: 1px solid #f3f4f6;">
-                    <div style="flex: 1; min-width: 250px;">
-                        <p style="font-size: 11px; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Booking ID: #RC-2026-0091</p>
-                        <div style="display:flex; align-items:center; gap: 12px; margin-bottom: 4px;">
-                            <h4 style="font-size:20px; font-weight:600; margin:0;">Room 403</h4>
-                            <span class="status-badge available" style="padding: 2px 6px; font-size:10px;">Confirmed</span>
-                        </div>
-                        <p style="font-size:14px; color:#6b7280; margin:0;">Classroom &nbsp;&bull;&nbsp; Academic Building, 4th Floor</p>
-                        
-                        <div style="margin-top: 16px; font-size: 14px; color: #111827; display:flex; flex-wrap: wrap; gap:20px;">
-                            <span style="display:flex; align-items:center; gap:6px;"><i class="bi bi-calendar3" style="color:#6b7280;"></i> Sep 10, 2026</span>
-                            <span style="display:flex; align-items:center; gap:6px;"><i class="bi bi-clock" style="color:#6b7280;"></i> 10:00 AM – 12:00 PM</span>
-                            <span style="display:flex; align-items:center; gap:6px;"><i class="bi bi-tag" style="color:#6b7280;"></i> Group Study Session</span>
-                        </div>
+        <div class="row gy-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="section-card h-100" style="position: relative;">
+                    <div style="position: absolute; top: 20px; right: 20px;">
+                        <span class="badge" style="background-color: #22c55e;">CONFIRMED</span>
                     </div>
-                    <div style="display:flex; gap:12px; margin-top: 16px;">
-                        <a href="room-details.html" class="btn-rc-outline" style="padding: 8px 16px; font-size: 13px;">Details</a>
-                        <button class="btn-rc-danger" style="padding: 8px 16px; font-size: 13px;">Cancel</button>
+                    <h3 style="color: #1e3a8a; font-size: 20px; margin-bottom: 8px;">Room 403</h3>
+                    <p style="color: #64748b; font-size: 14px; margin-bottom: 20px;">Classroom &bull; 4th Floor</p>
+                    <div style="background: #f8fafc; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+                        <div style="font-weight: 600; color: #1e3a8a; margin-bottom: 4px;">Saturday</div>
+                        <div style="color: #64748b; font-size: 14px;">11:00 AM – 12:00 PM</div>
                     </div>
+                    <button class="btn-rc-outline w-100">View Details</button>
                 </div>
+            </div>
 
-                
-                <div style="display:flex; flex-wrap: wrap; justify-content:space-between; align-items:flex-start; padding-top: 30px;">
-                    <div style="flex: 1; min-width: 250px;">
-                        <p style="font-size: 11px; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Booking ID: #RC-2026-0087</p>
-                        <div style="display:flex; align-items:center; gap: 12px; margin-bottom: 4px;">
-                            <h4 style="font-size:20px; font-weight:600; margin:0;">Lab 604</h4>
-                            <span class="status-badge occupied" style="padding: 2px 6px; font-size:10px;">Pending</span>
-                        </div>
-                        <p style="font-size:14px; color:#6b7280; margin:0;">Laboratory &nbsp;&bull;&nbsp; Engineering Building, 6th Floor</p>
-                        
-                        <div style="margin-top: 16px; font-size: 14px; color: #111827; display:flex; flex-wrap: wrap; gap:20px;">
-                            <span style="display:flex; align-items:center; gap:6px;"><i class="bi bi-calendar3" style="color:#6b7280;"></i> Sep 14, 2026</span>
-                            <span style="display:flex; align-items:center; gap:6px;"><i class="bi bi-clock" style="color:#6b7280;"></i> 02:00 PM – 04:00 PM</span>
-                            <span style="display:flex; align-items:center; gap:6px;"><i class="bi bi-tag" style="color:#6b7280;"></i> Project Development</span>
-                        </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="section-card h-100" style="position: relative;">
+                    <div style="position: absolute; top: 20px; right: 20px;">
+                        <span class="badge" style="background-color: #f59e0b;">PENDING</span>
                     </div>
-                    <div style="display:flex; gap:12px; margin-top: 16px;">
-                        <a href="room-details.html" class="btn-rc-outline" style="padding: 8px 16px; font-size: 13px;">Details</a>
-                        <button class="btn-rc-danger" style="padding: 8px 16px; font-size: 13px;">Cancel</button>
+                    <h3 style="color: #1e3a8a; font-size: 20px; margin-bottom: 8px;">Room 601</h3>
+                    <p style="color: #64748b; font-size: 14px; margin-bottom: 20px;">Laboratory &bull; 6th Floor</p>
+                    <div style="background: #f8fafc; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+                        <div style="font-weight: 600; color: #1e3a8a; margin-bottom: 4px;">Sunday</div>
+                        <div style="color: #64748b; font-size: 14px;">02:00 PM – 04:00 PM</div>
                     </div>
+                    <button class="btn-rc-outline w-100">Cancel Request</button>
                 </div>
+            </div>
 
+            <div class="col-md-6 col-lg-4">
+                <div class="section-card h-100" style="position: relative;">
+                    <div style="position: absolute; top: 20px; right: 20px;">
+                        <span class="badge" style="background-color: #94a3b8;">COMPLETED</span>
+                    </div>
+                    <h3 style="color: #1e3a8a; font-size: 20px; margin-bottom: 8px;">Room 901</h3>
+                    <p style="color: #64748b; font-size: 14px; margin-bottom: 20px;">Classroom &bull; 9th Floor</p>
+                    <div style="background: #f8fafc; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+                        <div style="font-weight: 600; color: #1e3a8a; margin-bottom: 4px;">Last Monday</div>
+                        <div style="color: #64748b; font-size: 14px;">10:00 AM – 11:30 AM</div>
+                    </div>
+                    <button class="btn-rc-outline w-100" disabled style="opacity: 0.5;">Book Again</button>
+                </div>
             </div>
         </div>
-
     </div>
 </main>
 
 <footer class="site-footer mt-auto">
     <div class="container text-center">
-        <p style="color:#6b7280; font-size:13px; margin:0;">&copy; 2026 ROOMCHECK System. Prototype version.</p>
+        <p style="color:#64748b; font-size:13px; margin:0;">&copy; 2026 ROOMCHECK.</p>
     </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-

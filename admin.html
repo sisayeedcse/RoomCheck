@@ -10,205 +10,141 @@
     <link rel="stylesheet" href="css/admin.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body class="admin-page">
+<body>
 
-<nav class="site-navbar" style="padding:15px 30px;">
-    <div class="d-flex justify-content-between align-items-center w-100">
-        <a class="navbar-brand-text" href="admin.html">ROOM<span>CHECK</span></a>
-        <div class="d-flex align-items-center gap-4">
-            <span style="font-size:13px; color:#6b7280; font-weight:500;">System Administrator</span>
-            <a href="index.html" class="btn-rc-outline" style="padding: 6px 16px; font-size: 12px;">Logout</a>
+<nav class="site-navbar">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center w-100">
+            <a class="navbar-brand-text" href="index.html">ROOM<span>CHECK</span></a>
+            <div class="d-flex gap-4 align-items-center">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active" href="admin.html">Admin Dashboard</a>
+            </div>
         </div>
     </div>
 </nav>
 
 <div class="admin-layout">
-
-    <aside class="admin-sidebar">
-        <div class="admin-sidebar-header">
-            <div class="admin-sidebar-brand">ROOM<span>CHECK</span></div>
-            <div class="admin-sidebar-role">Admin Panel</div>
-        </div>
-        <nav class="admin-sidebar-nav">
-            <a href="admin.html" class="sidebar-item active">
-                <i class="bi bi-grid-1x2"></i>
-                <span class="sidebar-label">Dashboard</span>
-            </a>
-            <a href="#" class="sidebar-item">
-                <i class="bi bi-door-open"></i>
-                <span class="sidebar-label">Rooms</span>
-            </a>
-            <a href="add-room.html" class="sidebar-item">
-                <i class="bi bi-plus-circle"></i>
-                <span class="sidebar-label">Add Room</span>
-            </a>
-            <a href="#" class="sidebar-item">
-                <i class="bi bi-journal-bookmark"></i>
-                <span class="sidebar-label">Bookings</span>
-            </a>
-            <a href="#" class="sidebar-item">
-                <i class="bi bi-calendar3"></i>
-                <span class="sidebar-label">Schedules</span>
-            </a>
-            <a href="#" class="sidebar-item">
-                <i class="bi bi-people"></i>
-                <span class="sidebar-label">Users</span>
-            </a>
-            <a href="#" class="sidebar-item">
-                <i class="bi bi-bar-chart"></i>
-                <span class="sidebar-label">Reports</span>
-            </a>
-            <a href="#" class="sidebar-item">
-                <i class="bi bi-gear"></i>
-                <span class="sidebar-label">Settings</span>
-            </a>
-        </nav>
-        <div class="sidebar-logout">
-            <a href="index.html" class="sidebar-item" style="margin-bottom:0;">
-                <i class="bi bi-box-arrow-left"></i>
-                <span class="sidebar-label">Logout</span>
-            </a>
-        </div>
-    </aside>
-
-    <main class="admin-main">
-
+    <div class="admin-main">
         <div class="admin-header">
-            <h1 class="admin-header-title">Admin Dashboard</h1>
-            <p class="admin-header-desc">Monitor classroom and laboratory usage across campus. Sample data shown below.</p>
+            <h1 class="admin-header-title">System Overview</h1>
+            <p class="admin-header-desc">Manage the RoomCheck static prototype data.</p>
         </div>
 
-        <div class="row gy-3 mb-4 admin-stats-row">
-            <div class="col-6 col-md-3">
+        <div class="row gy-4 mb-5">
+            <div class="col-md-3">
                 <div class="admin-stat-card">
-                    <div class="admin-stat-icon blue"><i class="bi bi-building"></i></div>
+                    <div class="admin-stat-icon blue"><i class="bi bi-door-open"></i></div>
                     <div>
-                        <div id="admin-total-rooms" class="admin-stat-value">22</div>
-                        <div class="admin-stat-label">Total Rooms</div>
+                        <div class="admin-stat-value">22</div>
+                        <div class="admin-stat-label">Total CSE Rooms</div>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-3">
+            <div class="col-md-3">
                 <div class="admin-stat-card">
-                    <div class="admin-stat-icon green"><i class="bi bi-check-circle"></i></div>
+                    <div class="admin-stat-icon green"><i class="bi bi-easel"></i></div>
                     <div>
-                        <div id="admin-avail-rooms" class="admin-stat-value">18</div>
-                        <div class="admin-stat-label">Available Now</div>
+                        <div class="admin-stat-value">16</div>
+                        <div class="admin-stat-label">Classrooms</div>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-3">
+            <div class="col-md-3">
                 <div class="admin-stat-card">
-                    <div class="admin-stat-icon red"><i class="bi bi-x-circle"></i></div>
+                    <div class="admin-stat-icon orange"><i class="bi bi-pc-display"></i></div>
                     <div>
-                        <div id="admin-occ-rooms" class="admin-stat-value">4</div>
-                        <div class="admin-stat-label">Occupied Now</div>
+                        <div class="admin-stat-value">6</div>
+                        <div class="admin-stat-label">Laboratories</div>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-3">
+            <div class="col-md-3">
                 <div class="admin-stat-card">
-                    <div class="admin-stat-icon orange"><i class="bi bi-journal-check"></i></div>
+                    <div class="admin-stat-icon red"><i class="bi bi-calendar-event"></i></div>
                     <div>
-                        <div class="admin-stat-value">12</div>
-                        <div class="admin-stat-label">Today's Bookings</div>
+                        <div class="admin-stat-value">10</div>
+                        <div class="admin-stat-label">Weekly Classes</div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="admin-card">
-            <div class="admin-card-header">
-                <p class="admin-card-title">Room Status Overview</p>
-                <a href="add-room.html" class="btn-rc btn-rc-primary" style="font-size:13px; padding:7px 14px;">+ Add Room</a>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h2 class="admin-card-title">Room Status Directory</h2>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0" style="font-size: 14px;">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Room</th>
+                                    <th>Type</th>
+                                    <th>Floor</th>
+                                    <th>Status (Example)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="font-weight: 600; color: #1e3a8a;">403</td>
+                                    <td>Classroom</td>
+                                    <td>4th Floor</td>
+                                    <td><span class="status-badge occupied">OCCUPIED</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: 600; color: #1e3a8a;">405</td>
+                                    <td>Classroom</td>
+                                    <td>4th Floor</td>
+                                    <td><span class="status-badge available">AVAILABLE</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: 600; color: #1e3a8a;">601</td>
+                                    <td>Laboratory</td>
+                                    <td>6th Floor</td>
+                                    <td><span class="status-badge occupied">OCCUPIED</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: 600; color: #1e3a8a;">901</td>
+                                    <td>Classroom</td>
+                                    <td>9th Floor</td>
+                                    <td><span class="status-badge available">AVAILABLE</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-            <div class="table-responsive">
-                <table class="admin-table">
-                    <thead>
-                        <tr>
-                            <th>Room</th>
-                            <th>Type</th>
-                            <th>Building &bull; Floor</th>
-                            <th>Capacity</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody id="admin-room-tbody">
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="admin-card">
-            <div class="admin-card-header">
-                <p class="admin-card-title">Recent Bookings</p>
-            </div>
-            <div class="table-responsive">
-                <table class="admin-table">
-                    <thead>
-                        <tr>
-                            <th>Booking ID</th>
-                            <th>Room</th>
-                            <th>User</th>
-                            <th>Date</th>
-                            <th>Time</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="font-family:monospace; font-size:13px;">#RC-2026-0091</td>
-                            <td class="room-number-cell">Room 403</td>
-                            <td>Sayeed Islam</td>
-                            <td>Sep 10, 2026</td>
-                            <td>10:00 AM – 12:00 PM</td>
-                            <td><span class="status-badge confirmed">Confirmed</span></td>
-                        </tr>
-                        <tr>
-                            <td style="font-family:monospace; font-size:13px;">#RC-2026-0090</td>
-                            <td class="room-number-cell">Lab 601</td>
-                            <td>Rafiq Ahmed</td>
-                            <td>Sep 9, 2026</td>
-                            <td>02:00 PM – 04:00 PM</td>
-                            <td><span class="status-badge confirmed">Confirmed</span></td>
-                        </tr>
-                        <tr>
-                            <td style="font-family:monospace; font-size:13px;">#RC-2026-0089</td>
-                            <td class="room-number-cell">Room 405</td>
-                            <td>Dr. Karim</td>
-                            <td>Sep 9, 2026</td>
-                            <td>08:00 AM – 10:00 AM</td>
-                            <td><span class="status-badge confirmed">Confirmed</span></td>
-                        </tr>
-                        <tr>
-                            <td style="font-family:monospace; font-size:13px;">#RC-2026-0088</td>
-                            <td class="room-number-cell">Lab 604</td>
-                            <td>Maliha Noor</td>
-                            <td>Sep 8, 2026</td>
-                            <td>01:00 PM – 03:00 PM</td>
-                            <td><span class="status-badge pending">Pending</span></td>
-                        </tr>
-                        <tr>
-                            <td style="font-family:monospace; font-size:13px;">#RC-2026-0087</td>
-                            <td class="room-number-cell">Room 404</td>
-                            <td>Tanvir Hossain</td>
-                            <td>Sep 7, 2026</td>
-                            <td>09:00 AM – 11:00 AM</td>
-                            <td><span class="status-badge cancelled">Cancelled</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="col-lg-4">
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h2 class="admin-card-title">Recent Bookings</h2>
+                    </div>
+                    <ul class="list-unstyled mb-0" style="font-size: 13px;">
+                        <li class="mb-3 pb-3 border-bottom">
+                            <strong style="color: #1e3a8a; display: block; margin-bottom: 4px;">Student ID: 1910...</strong>
+                            Requested Room 405<br>
+                            <span style="color: #64748b;">Pending Approval</span>
+                        </li>
+                        <li class="mb-3 pb-3 border-bottom">
+                            <strong style="color: #1e3a8a; display: block; margin-bottom: 4px;">Faculty: Dr. Ahmed</strong>
+                            Booked Room 904<br>
+                            <span style="color: #22c55e; font-weight: 600;">Confirmed</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-
-    </main>
+    </div>
 </div>
 
-<script src="js/rooms.js"></script>
-<script src="js/schedule.js"></script>
-<script src="js/room-check.js"></script>
+<footer class="site-footer mt-auto" style="padding: 20px 0;">
+    <div class="container text-center">
+        <p style="color:#64748b; font-size:13px; margin:0;">&copy; 2026 ROOMCHECK.</p>
+    </div>
+</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
