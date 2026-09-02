@@ -35,7 +35,7 @@ function checkRoomOccupancy(roomNumber, weekday, reqStart, reqEnd) {
         const classStart = timeToMinutes(c.startTime);
         const classEnd = timeToMinutes(c.endTime);
 
-        if (classStart < reqEnd && classEnd > reqStart) {
+        if (reqStart !== null && reqEnd !== null && classStart < reqEnd && classEnd > reqStart) {
             isOccupied = true;
             overlappingClasses.push(c);
         }
@@ -54,13 +54,13 @@ function displayResults() {
     const floorParam = urlParams.get('floor') || '';
 
 
-    if (!dateParam || !startParam || !endParam) {
+    if (!dateParam) {
         return; 
     }
 
     const weekday = getWeekday(dateParam);
-    const reqStart = timeToMinutes(startParam);
-    const reqEnd = timeToMinutes(endParam);
+    const reqStart = startParam ? timeToMinutes(startParam) : null;
+    const reqEnd = endParam ? timeToMinutes(endParam) : null;
 
     let filteredRooms = rooms;
 
@@ -184,31 +184,33 @@ document.addEventListener("DOMContentLoaded", () => {
             const startInput = form.querySelector('input[name="start"]');
             const endInput = form.querySelector('input[name="end"]');
 
-            if (!dateInput || !startInput || !endInput) return; 
+            if (!dateInput) return; 
 
             if (!dateInput.value) {
                 e.preventDefault();
                 alert("Please select a date.");
                 return;
             }
-            if (!startInput.value) {
+            if (startInput && !startInput.value) {
                 e.preventDefault();
                 alert("Please select a start time.");
                 return;
             }
-            if (!endInput.value) {
+            if (endInput && !endInput.value) {
                 e.preventDefault();
                 alert("Please select an end time.");
                 return;
             }
 
-            const startMins = timeToMinutes(startInput.value);
-            const endMins = timeToMinutes(endInput.value);
+            if (startInput && endInput) { 
+                const startMins = timeToMinutes(startInput.value);
+                const endMins = timeToMinutes(endInput.value);
 
-            if (endMins <= startMins) {
-                e.preventDefault();
-                alert("End time must be later than start time.");
-                return;
+                if (endMins <= startMins) {
+                    e.preventDefault();
+                    alert("End time must be later than start time.");
+                    return;
+                }
             }
         });
     });

@@ -9,185 +9,144 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body class="dashboard-page">
+<body>
 
-<nav class="navbar navbar-expand-lg site-navbar">
+<nav class="site-navbar">
     <div class="container">
-        <a class="navbar-brand navbar-brand-text" href="dashboard.html">ROOM<span>CHECK</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 gap-2 mt-3 mt-lg-0">
-                <li class="nav-item"><a class="nav-link active" href="dashboard.html">Dashboard</a></li>
-                <li class="nav-item"><a class="nav-link" href="search.html">Find a Room</a></li>
-                <li class="nav-item"><a class="nav-link" href="bookings.html">My Bookings</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
-                <li class="nav-item ms-lg-2"><a class="btn-nav-login" href="index.html" style="background:transparent; border:1px solid rgba(255,255,255,0.2); color:#cbd5e1;">Logout</a></li>
-            </ul>
+        <div class="d-flex justify-content-between align-items-center w-100">
+            <a class="navbar-brand-text" href="dashboard.html">ROOM<span>CHECK</span></a>
+            <div class="d-flex align-items-center gap-4">
+                <a class="nav-link active" href="dashboard.html">Dashboard</a>
+                <a class="nav-link" href="bookings.html">My Bookings</a>
+                <a href="index.html" class="btn-rc-outline" style="padding: 6px 16px; font-size:12px;">Logout</a>
+            </div>
         </div>
     </div>
 </nav>
 
-<div class="dashboard-header">
+<main class="dashboard-page" style="padding: 50px 0;">
     <div class="container">
-        <h1 class="dashboard-welcome">Good Morning, Sayeed</h1>
-        <p class="dashboard-welcome-sub">Find an available room for your next activity. Sample data shown below.</p>
-    </div>
-</div>
-
-<div class="dashboard-content">
-    <div class="container">
-
-        <div class="prototype-notice">
-            <i class="bi bi-info-circle"></i>
-            This is a sample dashboard view. Data shown here is for demonstration purposes only.
+        
+        <div class="d-flex justify-content-between align-items-end mb-4">
+            <div>
+                <h1 style="font-size: 28px; font-weight: 700; color: #1e3a8a; margin-bottom: 4px;">Student Dashboard</h1>
+                <p style="color: #64748b; font-size: 15px; margin: 0;">Welcome back, John. Here is your overview.</p>
+            </div>
         </div>
 
-        <div class="section-card mb-4">
-            <p class="section-card-title">Quick Search</p>
-            <form action="results.html" method="get">
+        <div class="quick-search-card mb-5">
+                        <form action="results.html" method="GET">
                 <div class="row gy-3 align-items-end">
-                    <div class="col-md-2 col-6">
-                        <label class="form-label-rc" for="d-date">Date</label>
-                        <input type="date" id="d-date" name="date" class="form-control-rc" required>
+                    <div class="col-md-3">
+                        <label class="form-label-rc" for="date">Date</label>
+                        <input type="date" id="date" name="date" class="form-control-rc" required>
                     </div>
-                    <div class="col-md-2 col-6">
-                        <label class="form-label-rc" for="d-start">Start</label>
-                        <input type="time" id="d-start" name="start" class="form-control-rc" required>
+                    <div class="col-md-2">
+                        <label class="form-label-rc" for="start">Start Time</label>
+                        <input type="time" id="start" name="start" class="form-control-rc" required>
                     </div>
-                    <div class="col-md-2 col-6">
-                        <label class="form-label-rc" for="d-end">End</label>
-                        <input type="time" id="d-end" name="end" class="form-control-rc" required>
+                    <div class="col-md-2">
+                        <label class="form-label-rc" for="end">End Time</label>
+                        <input type="time" id="end" name="end" class="form-control-rc" required>
                     </div>
-                    <div class="col-md-2 col-6">
-                        <label class="form-label-rc" for="d-type">Type</label>
-                        <select id="d-type" name="type" class="form-select-rc">
-                            <option value="">Any</option>
+                    <div class="col-md-3">
+                        <label class="form-label-rc" for="type">Room Type</label>
+                        <select id="type" name="type" class="form-select-rc">
+                            <option value="">Any Room</option>
                             <option>Classroom</option>
                             <option>Laboratory</option>
                         </select>
                     </div>
-                    <div class="col-md-2 col-6">
-                        <label class="form-label-rc" for="d-floor">Floor</label>
-                        <select id="d-floor" name="floor" class="form-select-rc">
-                            <option value="">Any</option>
-                            <option>4th Floor</option>
-                            <option>6th Floor</option>
-                            <option>9th Floor</option>
-                        </select>
-                    </div>
-                    <div class="col-md-2 col-6">
-                        <button type="submit" class="btn-search d-block text-center w-100 border-0">Search</button>
+                    <div class="col-md-2">
+                        <button type="submit" class="btn-search w-100">Search</button>
                     </div>
                 </div>
             </form>
         </div>
 
-        <div class="row gy-3 mb-4">
-            <div class="col-6 col-md-3">
-                <div class="stat-card">
-                    <div class="stat-icon blue"><i class="bi bi-door-open"></i></div>
-                    <div>
-                        <div class="stat-value">12</div>
-                        <div class="stat-label">Available Rooms</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="stat-card">
-                    <div class="stat-icon green"><i class="bi bi-calendar-check"></i></div>
-                    <div>
-                        <div class="stat-value">1</div>
-                        <div class="stat-label">Upcoming Booking</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="stat-card">
-                    <div class="stat-icon yellow"><i class="bi bi-journal-bookmark"></i></div>
-                    <div>
-                        <div class="stat-value">4</div>
-                        <div class="stat-label">My Bookings</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="stat-card">
-                    <div class="stat-icon purple"><i class="bi bi-star"></i></div>
-                    <div>
-                        <div class="stat-value">3</div>
-                        <div class="stat-label">Favorite Rooms</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="row gy-4">
-            <div class="col-lg-7">
-                <div class="section-card">
-                    <p class="section-card-title">Upcoming Booking</p>
-                    <div class="booking-mini-card">
-                        <div class="booking-mini-icon"><i class="bi bi-door-open"></i></div>
-                        <div style="flex:1;">
-                            <div class="d-flex justify-content-between align-items-flex-start gap-2 flex-wrap">
-                                <div>
-                                    <p class="booking-mini-title">Room 301</p>
-                                    <p class="booking-mini-meta">Classroom &nbsp;&bull;&nbsp; Main Building, 3rd Floor</p>
+            <div class="col-lg-8">
+                <div class="section-card" style="padding: 0;">
+                    <div style="padding: 24px; border-bottom: 1px solid #e2e8f0; display:flex; justify-content:space-between; align-items:center;">
+                        <p class="section-card-title" style="border:none; padding:0; margin:0;">Upcoming Bookings</p>
+                        <a href="bookings.html" style="font-size:13px; font-weight:600; color:#1e3a8a;">View All</a>
+                    </div>
+                    
+                    <div style="padding: 24px;">
+                        
+                        <div style="display:flex; flex-wrap: wrap; justify-content:space-between; align-items:flex-start; padding-bottom: 24px; border-bottom: 1px solid #f1f5f9;">
+                            <div>
+                                <div style="display:flex; align-items:center; gap: 12px; margin-bottom: 4px;">
+                                    <h4 style="font-size:18px; font-weight:700; color:#1e3a8a; margin:0;">Room 403</h4>
+                                    <span class="status-badge available" style="padding: 2px 8px; font-size:10px;">Confirmed</span>
                                 </div>
-                                <span class="status-badge confirmed">Confirmed</span>
+                                <p style="font-size:13px; color:#64748b; margin:0; font-weight:500;">Classroom &nbsp;&bull;&nbsp; 4th Floor</p>
+                                <div style="margin-top: 12px; font-size: 14px; color: #0f172a; display:flex; flex-wrap: wrap; gap:16px;">
+                                    <span><i class="bi bi-calendar3" style="color:#64748b; margin-right:4px;"></i> Sep 10, 2026</span>
+                                    <span><i class="bi bi-clock" style="color:#64748b; margin-right:4px;"></i> 10:00 AM – 12:00 PM</span>
+                                </div>
                             </div>
-                            <p class="booking-mini-meta" style="margin-top:6px;">
-                                <i class="bi bi-calendar3 me-1"></i> September 10, 2026
-                                &nbsp;&bull;&nbsp;
-                                <i class="bi bi-clock me-1"></i> 10:00 AM – 12:00 PM
-                            </p>
-                            <p class="booking-mini-meta"><i class="bi bi-tag me-1"></i> Purpose: Group Study Session</p>
-                            <div class="booking-mini-actions">
-                                <a href="room-details.html" class="btn-rc btn-rc-outline">View Details</a>
-                                <button class="btn-rc btn-rc-danger">Cancel</button>
+                            <div style="display:flex; gap:8px; margin-top:12px;">
+                                <a href="room-details.html" class="btn-rc-outline" style="padding: 6px 16px; font-size: 12px;">Modify</a>
+                            </div>
+                        </div>
+
+                        
+                        <div style="display:flex; flex-wrap: wrap; justify-content:space-between; align-items:flex-start; padding-top: 24px;">
+                            <div>
+                                <div style="display:flex; align-items:center; gap: 12px; margin-bottom: 4px;">
+                                    <h4 style="font-size:18px; font-weight:700; color:#1e3a8a; margin:0;">Lab 601</h4>
+                                    <span class="status-badge occupied" style="padding: 2px 8px; font-size:10px;">Pending</span>
+                                </div>
+                                <p style="font-size:13px; color:#64748b; margin:0; font-weight:500;">Laboratory &nbsp;&bull;&nbsp; 6th Floor</p>
+                                <div style="margin-top: 12px; font-size: 14px; color: #0f172a; display:flex; flex-wrap: wrap; gap:16px;">
+                                    <span><i class="bi bi-calendar3" style="color:#64748b; margin-right:4px;"></i> Sep 12, 2026</span>
+                                    <span><i class="bi bi-clock" style="color:#64748b; margin-right:4px;"></i> 2:00 PM – 4:00 PM</span>
+                                </div>
+                            </div>
+                            <div style="display:flex; gap:8px; margin-top:12px;">
+                                <a href="room-details.html" class="btn-rc-outline" style="padding: 6px 16px; font-size: 12px;">Modify</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-5">
-                <div class="section-card h-100">
-                    <p class="section-card-title">Recent Activity</p>
-                    <div class="activity-item">
-                        <div class="activity-dot"></div>
-                        <span class="activity-text">Booked Room 301 for group study</span>
-                        <span class="activity-time">2 days ago</span>
+            <div class="col-lg-4">
+                <div class="section-card h-100" style="padding: 24px;">
+                    <p class="section-card-title" style="margin-bottom:24px;">Quick Stats</p>
+                    
+                    <div style="display:flex; align-items:center; gap: 16px; padding: 16px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 12px;">
+                        <div style="width:40px; height:40px; background:#eff6ff; color:#1e3a8a; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:18px;"><i class="bi bi-journal-check"></i></div>
+                        <div>
+                            <div style="font-size:20px; font-weight:700; color:#0f172a; line-height:1;">4</div>
+                            <div style="font-size:12px; color:#64748b; font-weight:600; text-transform:uppercase; margin-top:4px;">Total Bookings</div>
+                        </div>
                     </div>
-                    <div class="activity-item">
-                        <div class="activity-dot" style="background:#8b5cf6;"></div>
-                        <span class="activity-text">Checked Lab 204 availability</span>
-                        <span class="activity-time">3 days ago</span>
+
+                    <div style="display:flex; align-items:center; gap: 16px; padding: 16px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px;">
+                        <div style="width:40px; height:40px; background:#fffbeb; color:#d97706; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:18px;"><i class="bi bi-star-fill"></i></div>
+                        <div>
+                            <div style="font-size:20px; font-weight:700; color:#0f172a; line-height:1;">3</div>
+                            <div style="font-size:12px; color:#64748b; font-weight:600; text-transform:uppercase; margin-top:4px;">Saved Rooms</div>
+                        </div>
                     </div>
-                    <div class="activity-item">
-                        <div class="activity-dot" style="background:#ef4444;"></div>
-                        <span class="activity-text">Cancelled booking for Room 202</span>
-                        <span class="activity-time">5 days ago</span>
-                    </div>
-                    <div class="activity-item">
-                        <div class="activity-dot"></div>
-                        <span class="activity-text">Booked Lab 301 for project work</span>
-                        <span class="activity-time">1 week ago</span>
-                    </div>
-                    <div class="activity-item">
-                        <div class="activity-dot"></div>
-                        <span class="activity-text">Searched for rooms in Engineering Building</span>
-                        <span class="activity-time">1 week ago</span>
-                    </div>
+                    
                 </div>
             </div>
         </div>
 
     </div>
-</div>
+</main>
 
-<script src="js/room-check.js"></script>
+<footer class="site-footer mt-auto" style="padding: 24px 0;">
+    <div class="container text-center">
+        <p style="color:#64748b; font-size:13px; margin:0; font-weight: 500;">&copy; 2026 ROOMCHECK. Developed for CSE Department.</p>
+    </div>
+</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+

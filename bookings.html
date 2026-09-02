@@ -9,105 +9,95 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body class="page-wrapper">
+<body>
 
-<nav class="navbar navbar-expand-lg site-navbar">
+<nav class="site-navbar">
     <div class="container">
-        <a class="navbar-brand navbar-brand-text" href="dashboard.html">ROOM<span>CHECK</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 gap-2 mt-3 mt-lg-0">
-                <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
-                <li class="nav-item"><a class="nav-link" href="search.html">Find a Room</a></li>
-                <li class="nav-item"><a class="nav-link active" href="bookings.html">My Bookings</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
-                <li class="nav-item ms-lg-2"><a class="btn-nav-login" href="index.html" style="background:transparent; border:1px solid rgba(255,255,255,0.2); color:#cbd5e1;">Logout</a></li>
-            </ul>
+        <div class="d-flex justify-content-between align-items-center">
+            <a class="navbar-brand-text" href="dashboard.html">ROOM<span>CHECK</span></a>
+            <div class="d-flex align-items-center gap-4">
+                <a class="nav-link" href="dashboard.html">Dashboard</a>
+                <a class="nav-link active" href="bookings.html">My Bookings</a>
+                <a href="search.html" class="btn-rc-primary" style="padding: 6px 16px; font-size:12px;">New Search</a>
+            </div>
         </div>
     </div>
 </nav>
 
-<div class="page-header">
-    <div class="container">
-        <h1 class="page-header-title">My Bookings</h1>
-        <p class="page-header-desc">View and manage your room reservations. Sample data shown below.</p>
-    </div>
-</div>
-
-<main class="bookings-page">
-    <div class="container">
-
-        <div class="prototype-notice">
-            <i class="bi bi-info-circle"></i>
-            This is a sample bookings page. In the final system, your actual bookings will appear here.
+<main class="bookings-page" style="padding: 60px 0;">
+    <div class="container" style="max-width: 900px;">
+        
+        <div style="margin-bottom: 40px;">
+            <h1 style="font-size: 32px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 8px;">My Bookings</h1>
+            <p style="font-size: 15px; color: #6b7280;">View and manage your room reservations.</p>
         </div>
 
-        <div class="tab-nav">
-            <button class="tab-btn active">Upcoming</button>
-            <button class="tab-btn">Completed</button>
-            <button class="tab-btn">Cancelled</button>
+        <div style="display: flex; gap: 24px; border-bottom: 1px solid #e5e7eb; margin-bottom: 30px;">
+            <div style="padding-bottom: 12px; border-bottom: 2px solid #111827; font-weight: 600; color: #111827; font-size: 14px; cursor: pointer;">Upcoming</div>
+            <div style="padding-bottom: 12px; font-weight: 500; color: #6b7280; font-size: 14px; cursor: pointer;">Completed</div>
+            <div style="padding-bottom: 12px; font-weight: 500; color: #6b7280; font-size: 14px; cursor: pointer;">Cancelled</div>
         </div>
 
-        <div class="booking-card">
-            <div class="booking-card-icon">
-                <i class="bi bi-door-open"></i>
-            </div>
-            <div class="booking-card-content">
-                <p class="booking-id">Booking ID: #RC-2026-0091</p>
-                <h3 class="booking-card-title">Room 301</h3>
-                <p class="booking-card-subtitle">Classroom &nbsp;&bull;&nbsp; Main Building, 3rd Floor</p>
-                <div class="booking-card-meta">
-                    <div class="booking-meta-item"><i class="bi bi-calendar3"></i> September 10, 2026</div>
-                    <div class="booking-meta-item"><i class="bi bi-clock"></i> 10:00 AM – 12:00 PM</div>
-                    <div class="booking-meta-item"><i class="bi bi-tag"></i> Group Study Session</div>
+        <div class="section-card" style="padding: 0;">
+            <div style="padding: 30px;">
+                
+                
+                <div style="display:flex; flex-wrap: wrap; justify-content:space-between; align-items:flex-start; padding-bottom: 30px; border-bottom: 1px solid #f3f4f6;">
+                    <div style="flex: 1; min-width: 250px;">
+                        <p style="font-size: 11px; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Booking ID: #RC-2026-0091</p>
+                        <div style="display:flex; align-items:center; gap: 12px; margin-bottom: 4px;">
+                            <h4 style="font-size:20px; font-weight:600; margin:0;">Room 301</h4>
+                            <span class="status-badge available" style="padding: 2px 6px; font-size:10px;">Confirmed</span>
+                        </div>
+                        <p style="font-size:14px; color:#6b7280; margin:0;">Classroom &nbsp;&bull;&nbsp; Main Building, 3rd Floor</p>
+                        
+                        <div style="margin-top: 16px; font-size: 14px; color: #111827; display:flex; flex-wrap: wrap; gap:20px;">
+                            <span style="display:flex; align-items:center; gap:6px;"><i class="bi bi-calendar3" style="color:#6b7280;"></i> Sep 10, 2026</span>
+                            <span style="display:flex; align-items:center; gap:6px;"><i class="bi bi-clock" style="color:#6b7280;"></i> 10:00 AM – 12:00 PM</span>
+                            <span style="display:flex; align-items:center; gap:6px;"><i class="bi bi-tag" style="color:#6b7280;"></i> Group Study Session</span>
+                        </div>
+                    </div>
+                    <div style="display:flex; gap:12px; margin-top: 16px;">
+                        <a href="room-details.html" class="btn-rc-outline" style="padding: 8px 16px; font-size: 13px;">Details</a>
+                        <button class="btn-rc-danger" style="padding: 8px 16px; font-size: 13px;">Cancel</button>
+                    </div>
                 </div>
-                <div class="booking-card-actions">
-                    <span class="status-badge confirmed">Confirmed</span>
-                    <a href="room-details.html" class="btn-rc btn-rc-outline">View Details</a>
-                    <button class="btn-rc btn-rc-danger">Cancel Booking</button>
-                </div>
-            </div>
-        </div>
 
-        <div class="booking-card">
-            <div class="booking-card-icon lab">
-                <i class="bi bi-pc-display"></i>
-            </div>
-            <div class="booking-card-content">
-                <p class="booking-id">Booking ID: #RC-2026-0087</p>
-                <h3 class="booking-card-title">Lab 301</h3>
-                <p class="booking-card-subtitle">Laboratory &nbsp;&bull;&nbsp; Engineering Building, 3rd Floor</p>
-                <div class="booking-card-meta">
-                    <div class="booking-meta-item"><i class="bi bi-calendar3"></i> September 14, 2026</div>
-                    <div class="booking-meta-item"><i class="bi bi-clock"></i> 02:00 PM – 04:00 PM</div>
-                    <div class="booking-meta-item"><i class="bi bi-tag"></i> Project Development</div>
+                
+                <div style="display:flex; flex-wrap: wrap; justify-content:space-between; align-items:flex-start; padding-top: 30px;">
+                    <div style="flex: 1; min-width: 250px;">
+                        <p style="font-size: 11px; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Booking ID: #RC-2026-0087</p>
+                        <div style="display:flex; align-items:center; gap: 12px; margin-bottom: 4px;">
+                            <h4 style="font-size:20px; font-weight:600; margin:0;">Lab 301</h4>
+                            <span class="status-badge occupied" style="padding: 2px 6px; font-size:10px;">Pending</span>
+                        </div>
+                        <p style="font-size:14px; color:#6b7280; margin:0;">Laboratory &nbsp;&bull;&nbsp; Engineering Building, 3rd Floor</p>
+                        
+                        <div style="margin-top: 16px; font-size: 14px; color: #111827; display:flex; flex-wrap: wrap; gap:20px;">
+                            <span style="display:flex; align-items:center; gap:6px;"><i class="bi bi-calendar3" style="color:#6b7280;"></i> Sep 14, 2026</span>
+                            <span style="display:flex; align-items:center; gap:6px;"><i class="bi bi-clock" style="color:#6b7280;"></i> 02:00 PM – 04:00 PM</span>
+                            <span style="display:flex; align-items:center; gap:6px;"><i class="bi bi-tag" style="color:#6b7280;"></i> Project Development</span>
+                        </div>
+                    </div>
+                    <div style="display:flex; gap:12px; margin-top: 16px;">
+                        <a href="room-details.html" class="btn-rc-outline" style="padding: 8px 16px; font-size: 13px;">Details</a>
+                        <button class="btn-rc-danger" style="padding: 8px 16px; font-size: 13px;">Cancel</button>
+                    </div>
                 </div>
-                <div class="booking-card-actions">
-                    <span class="status-badge pending">Pending</span>
-                    <a href="room-details.html" class="btn-rc btn-rc-outline">View Details</a>
-                    <button class="btn-rc btn-rc-danger">Cancel Booking</button>
-                </div>
-            </div>
-        </div>
 
-        <div style="padding: 28px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8fafc; text-align:center;">
-            <p style="font-size:15px; color:#64748b; margin-bottom:16px;">No completed or cancelled bookings to display in this sample view.</p>
-            <a href="search.html" class="btn-rc btn-rc-primary" style="display:inline-block;">Find a Room</a>
+            </div>
         </div>
 
     </div>
 </main>
 
-<footer class="site-footer">
-    <div class="container">
-        <div class="footer-brand">ROOM<span>CHECK</span></div>
-        <hr class="footer-divider">
-        <p class="footer-copy">&copy; 2026 ROOMCHECK. A university Internet Programming project prototype.</p>
+<footer class="site-footer mt-auto">
+    <div class="container text-center">
+        <p style="color:#6b7280; font-size:13px; margin:0;">&copy; 2026 ROOMCHECK System. Prototype version.</p>
     </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+

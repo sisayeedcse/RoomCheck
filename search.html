@@ -3,165 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find a Room — ROOMCHECK</title>
+    <title>Search Rooms — ROOMCHECK</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body class="page-wrapper">
+<body>
 
-<nav class="navbar navbar-expand-lg site-navbar">
+<nav class="site-navbar">
     <div class="container">
-        <a class="navbar-brand navbar-brand-text" href="index.html">ROOM<span>CHECK</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 gap-2 mt-3 mt-lg-0">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="search.html">Find a Room</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html#how-it-works">How It Works</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-                <li class="nav-item ms-lg-2"><a class="btn-nav-login" href="login.html">Login</a></li>
-            </ul>
+        <div class="d-flex justify-content-between align-items-center w-100">
+            <a class="navbar-brand-text" href="index.html">ROOM<span>CHECK</span></a>
+            <div class="d-flex gap-4 align-items-center">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active" href="search.html">Find a Room</a>
+                <a class="nav-link" href="index.html#how-it-works">How It Works</a>
+                <a class="nav-link" href="index.html#about">About</a>
+                <a class="btn-rc-primary" href="login.html" style="padding: 6px 16px;">Login</a>
+            </div>
         </div>
     </div>
 </nav>
 
-<div class="page-header">
+<main style="padding: 60px 0;">
     <div class="container">
-        <h1 class="page-header-title">Find an Available Room</h1>
-        <p class="page-header-desc">Enter a date and room number to check availability.</p>
-    </div>
-</div>
+        <div class="text-center mb-5">
+            <h1 style="font-size: 32px; font-weight: 700; color: #1e3a8a;">Find an Available Room</h1>
+            <p style="color: #64748b; font-size: 16px;">Choose your preferred time and room requirements.</p>
+        </div>
 
-<main class="search-page">
-    <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <div class="search-panel">
-                    <h2 class="search-panel-title">Room Search</h2>
-                    <p class="search-panel-desc">Fill in the details below to find available rooms. This is a sample interface.</p>
-
-                    <form action="results.html" method="get">
-                        <div class="row gy-3">
+                <div class="quick-search-card">
+                    <form action="results.html" method="GET">
+                        <div class="row gy-4">
                             <div class="col-md-4">
-                                <label class="form-label-rc" for="s-date">Date</label>
-                                <input type="date" id="s-date" name="date" class="form-control-rc" required>
+                                <label class="form-label-rc" for="date">Date</label>
+                                <input type="date" id="date" name="date" class="form-control-rc" required>
                             </div>
                             <div class="col-md-4">
-                                <label class="form-label-rc" for="s-start">Start Time</label>
-                                <input type="time" id="s-start" name="start" class="form-control-rc" required>
+                                <label class="form-label-rc" for="start">Start Time</label>
+                                <input type="time" id="start" name="start" class="form-control-rc" required>
                             </div>
                             <div class="col-md-4">
-                                <label class="form-label-rc" for="s-end">End Time</label>
-                                <input type="time" id="s-end" name="end" class="form-control-rc" required>
+                                <label class="form-label-rc" for="end">End Time</label>
+                                <input type="time" id="end" name="end" class="form-control-rc" required>
                             </div>
+                            
                             <div class="col-md-4">
-                                <label class="form-label-rc" for="s-type">Room Type</label>
-                                <select id="s-type" name="type" class="form-select-rc">
-                                    <option value="">Any Room</option>
+                                <label class="form-label-rc" for="type">Room Type</label>
+                                <select id="type" name="type" class="form-select-rc">
+                                    <option value="">Any Type</option>
                                     <option>Classroom</option>
                                     <option>Laboratory</option>
                                 </select>
                             </div>
                             <div class="col-md-4">
-                                <label class="form-label-rc" for="s-floor">Floor</label>
-                                <select id="s-floor" name="floor" class="form-select-rc">
-                                    <option value="">Any Floor</option>
-                                    <option>4th Floor</option>
-                                    <option>6th Floor</option>
-                                    <option>9th Floor</option>
+                                <label class="form-label-rc" for="capacity">Capacity</label>
+                                <select id="capacity" name="capacity" class="form-select-rc">
+                                    <option value="">Any Capacity</option>
+                                    <option>20+ Students</option>
+                                    <option>30+ Students</option>
+                                    <option>40+ Students</option>
+                                    <option>50+ Students</option>
                                 </select>
                             </div>
                             <div class="col-md-4">
-                                <label class="form-label-rc" for="s-room">Room (Optional)</label>
-                                <select id="s-room" name="room" class="form-select-rc">
-                                    <option value="">Any Room</option>
-                                    <optgroup label="Classrooms — 4th Floor">
-                                        <option>403</option>
-                                        <option>404</option>
-                                        <option>405</option>
-                                        <option>406</option>
-                                        <option>408</option>
-                                        <option>409</option>
-                                        <option>410</option>
-                                        <option>411</option>
-                                    </optgroup>
-                                    <optgroup label="Classrooms — 6th Floor">
-                                        <option>610</option>
-                                        <option>611</option>
-                                        <option>612</option>
-                                        <option>613</option>
-                                    </optgroup>
-                                    <optgroup label="Classrooms — 9th Floor">
-                                        <option>901</option>
-                                        <option>902</option>
-                                        <option>903</option>
-                                        <option>910</option>
-                                    </optgroup>
-                                    <optgroup label="Labs — 6th Floor">
-                                        <option>601</option>
-                                        <option>604</option>
-                                        <option>605</option>
-                                        <option>608</option>
-                                    </optgroup>
-                                    <optgroup label="Labs — 9th Floor">
-                                        <option>904</option>
-                                        <option>905</option>
-                                    </optgroup>
+                                <label class="form-label-rc" for="building">Building</label>
+                                <select id="building" name="building" class="form-select-rc">
+                                    <option value="">Any Building</option>
+                                    <option>Main Building</option>
+                                    <option>Science Building</option>
+                                    <option>Engineering Building</option>
+                                    <option>Academic Building</option>
                                 </select>
                             </div>
-                            <div class="col-12 mt-2">
-                                <button type="submit" class="btn-search d-block text-center w-100 border-0">Search Rooms</button>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn-primary-main w-100" style="padding: 14px;">Search Rooms</button>
                             </div>
                         </div>
                     </form>
                 </div>
 
-                <div class="search-tip-box mt-4">
-                    <p class="search-tip-title"><i class="bi bi-lightbulb me-1"></i> Search Tips</p>
-                    <div class="search-tip-item">
-                        <i class="bi bi-dot" style="font-size:18px; flex-shrink:0;"></i>
-                        Enter a specific room number like Room 301 or Lab 204 to check that room directly.
-                    </div>
-                    <div class="search-tip-item">
-                        <i class="bi bi-dot" style="font-size:18px; flex-shrink:0;"></i>
-                        Make sure the date is selected so the system can show the correct availability for that day.
-                    </div>
-                    <div class="search-tip-item">
-                        <i class="bi bi-dot" style="font-size:18px; flex-shrink:0;"></i>
-                        If you are unsure of the exact room number, leave it blank to see all available rooms for the date.
-                    </div>
+                <div class="mt-5">
+                    <h4 style="font-size: 16px; color: #1e3a8a; margin-bottom: 16px;">Search Tips</h4>
+                    <ul style="color: #64748b; font-size: 14px; line-height: 1.8;">
+                        <li>Choose a time range that fits your activity.</li>
+                        <li>Use capacity to find a suitable room.</li>
+                        <li>Select a building if you have a preferred location.</li>
+                    </ul>
                 </div>
+
             </div>
         </div>
     </div>
 </main>
 
-<footer class="site-footer">
-    <div class="container">
-        <div class="row gy-4">
-            <div class="col-lg-4">
-                <div class="footer-brand">ROOM<span>CHECK</span></div>
-                <p class="footer-tagline">Smart Classroom & Lab Availability System</p>
-            </div>
-            <div class="col-6 col-lg-2 offset-lg-4">
-                <p class="footer-heading">Navigation</p>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="search.html">Find a Room</a></li>
-                    <li><a href="login.html">Login</a></li>
-                </ul>
-            </div>
-        </div>
-        <hr class="footer-divider">
-        <p class="footer-copy">&copy; 2026 ROOMCHECK. A university Internet Programming project prototype.</p>
+<footer class="site-footer mt-auto">
+    <div class="container text-center">
+        <p style="color:#64748b; font-size:13px; margin:0;">&copy; 2026 ROOMCHECK.</p>
     </div>
 </footer>
 
-<script src="js/room-check.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

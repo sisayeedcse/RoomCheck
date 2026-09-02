@@ -1,32 +1,26 @@
-# 🏫 RoomCheck
+# 🎓 RoomCheck
 
-Welcome to **RoomCheck**! This is a simple, easy-to-understand web project for finding empty classrooms and labs in the CSE department.
+Welcome to **RoomCheck**! This is a smart classroom and laboratory availability system designed for our Computer Science and Engineering (CSE) department. 
 
-If you are a student looking for a free room to study or do a group project, this website helps you figure out which rooms are empty and which ones have a class going on.
+## 🌟 What is RoomCheck?
+Have you ever walked around campus trying to find an empty room for a group project? RoomCheck solves that! It's a simple web interface where students and faculty can search for a room by date, time, and floor, and instantly see what is available.
 
-## 🚀 What Does It Do?
-* **Find Empty Rooms:** Pick a date and time, and it will tell you exactly which rooms are free!
-* **Check a Specific Room:** Want to know if Room 403 is free right now? Just search for it!
-* **Daily Schedule:** Click on any room to see its full routine for the day.
+## 🛠️ How it was built (Frontend Prototype)
+Right now, this is just the **Frontend Prototype**. That means it looks and feels like a real app, but it doesn't have a database behind it yet. 
+I built this using standard, beginner-friendly web technologies:
+- **HTML5** (For the structure of the 10 pages)
+- **CSS3** (For all the beautiful colors, fonts, and hover effects)
+- **Bootstrap 5** (Just the grid system to make it look good on mobile phones)
+- **Vanilla JavaScript** (To make the search button simulate finding a room)
 
-## 💻 How Is It Built?
-I kept this project super simple so any beginner CSE student can understand how it works. 
+## 📂 Project Pages
+- `index.html`: The main landing page.
+- `login.html` & `register.html`: Where users will sign in.
+- `dashboard.html`: The main control panel for students.
+- `search.html` & `results.html`: The core search engine to find rooms.
+- `bookings.html`: To manage reservations.
+- `admin.html` & `add-room.html`: For the university staff to manage the system.
 
-There are no complicated frameworks, no databases yet, and no confusing setup. It uses the pure basics of web development:
-* **HTML5:** For the structure of the pages.
-* **CSS3 & Bootstrap 5:** To make it look modern and beautiful.
-* **Vanilla JavaScript:** To handle the search logic and figure out if a room is free or occupied.
-
-### Where is the logic?
-Check out the `js/` folder!
-1. `rooms.js` holds a simple list of all 22 official CSE rooms.
-2. `schedule.js` holds the class routine.
-3. `room-check.js` does the math. It looks at the time you searched for, checks the routine, and decides if the room is taken!
-
-## 🛠️ How To Run It
-You don't need any servers to run this! 
-1. Download or clone this folder to your computer.
-2. Double-click on `index.html` to open it in Chrome, Firefox, or Edge.
-3. That's it! Try searching for a room on a Saturday morning.
-
-Happy coding! 🚀
+## 🚀 How to run it
+Since there is no complex backend (like Node.js or PHP) yet, you don't need any servers!
+Just double-click on `index.html` to open it in your browser (Chrome, Edge, or Safari) and click around!
