@@ -38,45 +38,39 @@
                 <div class="quick-search-card">
                     <form action="results.html" method="GET">
                         <div class="row gy-4">
-                            <div class="col-md-4">
-                                <label class="form-label-rc" for="date">Date</label>
+                                                        <div class="col-md-4">
+                                <label class="form-label-rc" for="date">Select Date</label>
                                 <input type="date" id="date" name="date" class="form-control-rc" required>
                             </div>
                             <div class="col-md-4">
-                                <label class="form-label-rc" for="start">Start Time</label>
-                                <input type="time" id="start" name="start" class="form-control-rc" required>
-                            </div>
-                            <div class="col-md-4">
-                                <label class="form-label-rc" for="end">End Time</label>
-                                <input type="time" id="end" name="end" class="form-control-rc" required>
-                            </div>
-                            
-                            <div class="col-md-4">
-                                <label class="form-label-rc" for="type">Room Type</label>
-                                <select id="type" name="type" class="form-select-rc">
-                                    <option value="">Any Type</option>
-                                    <option>Classroom</option>
-                                    <option>Laboratory</option>
+                                <label class="form-label-rc" for="floor">Select Floor</label>
+                                <select id="floor" name="floor" class="form-select-rc">
+                                    <option value="">Any Floor</option>
+                                    <option>4th Floor</option>
+                                    <option>6th Floor</option>
+                                    <option>9th Floor</option>
                                 </select>
                             </div>
                             <div class="col-md-4">
-                                <label class="form-label-rc" for="capacity">Capacity</label>
-                                <select id="capacity" name="capacity" class="form-select-rc">
-                                    <option value="">Any Capacity</option>
-                                    <option>20+ Students</option>
-                                    <option>30+ Students</option>
-                                    <option>40+ Students</option>
-                                    <option>50+ Students</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4">
-                                <label class="form-label-rc" for="building">Building</label>
-                                <select id="building" name="building" class="form-select-rc">
-                                    <option value="">Any Building</option>
-                                    <option>Main Building</option>
-                                    <option>Science Building</option>
-                                    <option>Engineering Building</option>
-                                    <option>Academic Building</option>
+                                <label class="form-label-rc" for="room">Room Number (Optional)</label>
+                                <select id="room" name="room" class="form-select-rc">
+                                    <option value="">Any Room</option>
+                                    <optgroup label="Classrooms - 4th Floor">
+                                        <option>403</option><option>404</option><option>405</option><option>406</option>
+                                        <option>408</option><option>409</option><option>410</option><option>411</option>
+                                    </optgroup>
+                                    <optgroup label="Classrooms - 6th Floor">
+                                        <option>610</option><option>611</option><option>612</option><option>613</option>
+                                    </optgroup>
+                                    <optgroup label="Classrooms - 9th Floor">
+                                        <option>901</option><option>902</option><option>903</option><option>910</option>
+                                    </optgroup>
+                                    <optgroup label="Laboratories - 6th Floor">
+                                        <option>601</option><option>604</option><option>605</option><option>608</option>
+                                    </optgroup>
+                                    <optgroup label="Laboratories - 9th Floor">
+                                        <option>904</option><option>905</option>
+                                    </optgroup>
                                 </select>
                             </div>
                             <div class="col-12 mt-4">
@@ -109,3 +103,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
